@@ -4,10 +4,10 @@ import numpy as np
 img = cv2.imread('./Data/lena.jpg')
 cv2.imshow('original image', img)
 
-# 그리기
+# create a new image array and draw lines, circles, rectangles, etc. on it
 overlay = np.zeros((700, 700, 3), dtype=np.uint8)
 
-overlay = cv2.line(img, (100, 100), (600, 600), (255, 0, 0), 5)
+overlay = cv2.line(overlay, (100, 100), (600, 600), (255, 0, 0), 5)
 overlay = cv2.circle(overlay, (150, 150), 100, (0, 255, 0), 4)
 overlay = cv2.rectangle(overlay, (300, 100), (500, 500), (0, 0, 255), 3)
 overlay = cv2.ellipse(overlay, (500, 300), (300, 200), 0, 90, 250, (255, 255, 0), 2)
